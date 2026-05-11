@@ -43,6 +43,7 @@ const ENTERPRISE_DOWNLOADS: DownloadRelease[] = [
 
 // ─── Map a GitHub asset filename to a DownloadRelease ────────────────────────
 function mapAsset(asset: {
+  id: number;
   name: string;
   size: number;
   browser_download_url: string;
@@ -74,7 +75,7 @@ function mapAsset(asset: {
     version: tagName,
     checksum: checksums[n] ? `sha256:${checksums[n]}` : "",
     fileSize: `${(asset.size / 1024 / 1024).toFixed(1)} MB`,
-    downloadUrl: asset.browser_download_url,
+    downloadUrl: `/api/downloads?assetId=${asset.id}`,
     releaseDate: asset.created_at.split("T")[0],
   };
 }
@@ -102,7 +103,7 @@ export default function DownloadsClient() {
         const checksums = release.checksums || {};
 
         const mapped: DownloadRelease[] = release.assets
-          .map((a: { name: string; size: number; browser_download_url: string; created_at: string }) => mapAsset(a, release.tag_name, checksums))
+          .map((a: { id: number; name: string; size: number; browser_download_url: string; created_at: string }) => mapAsset(a, release.tag_name, checksums))
           .filter(Boolean) as DownloadRelease[];
 
         setDownloads(mapped);
