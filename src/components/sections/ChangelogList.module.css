@@ -1,0 +1,79 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.entry {
+  padding: 14px 16px;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.entry:last-child {
+  border-bottom: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.version {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ghost);
+}
+
+.date {
+  font-size: 11px;
+  margin-left: auto;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 20px;
+  font-family: var(--mono);
+}
+
+.labelLatest {
+  background: rgba(0,242,255,0.12);
+  color: var(--cyan);
+  border: 0.5px solid rgba(0,242,255,0.2);
+}
+
+.labelStable {
+  background: rgba(0,200,83,0.12);
+  color: var(--emerald);
+  border: 0.5px solid rgba(0,200,83,0.2);
+}
+
+.labelOld {
+  background: var(--surface);
+  color: var(--muted);
+  border: 0.5px solid var(--border);
+}
+
+.notes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.note {
+  font-size: 12px;
+  color: var(--muted);
+  padding-left: 14px;
+  position: relative;
+}
+
+.note::before {
+  content: "·";
+  position: absolute;
+  left: 4px;
+  color: var(--hint);
+}

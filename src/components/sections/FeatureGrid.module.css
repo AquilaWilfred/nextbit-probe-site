@@ -1,0 +1,50 @@
+.heading {
+  margin-bottom: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.feat {
+  padding: 20px;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feat:nth-of-type(1),
+.feat:nth-of-type(3) {
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+.iconWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.title {
+  color: var(--ghost);
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.75;
+}

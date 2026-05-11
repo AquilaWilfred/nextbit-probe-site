@@ -1,0 +1,48 @@
+.sidebar {
+  width: 160px;
+  flex-shrink: 0;
+  border-right: 0.5px solid var(--border);
+  padding: 16px 10px;
+  background: var(--surface);
+  min-height: 500px;
+}
+
+.section {
+  margin-bottom: 18px;
+}
+
+.sectionLabel {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--hint);
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  padding: 0 6px;
+  margin-bottom: 4px;
+}
+
+.item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 6px 8px;
+  font-size: 12px;
+  color: var(--muted);
+  border-radius: var(--radius-sm);
+  border: none;
+  background: none;
+  transition: background 0.15s, color 0.15s;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: var(--card);
+  color: var(--ghost);
+}
+
+.active {
+  background: var(--card) !important;
+  color: var(--cyan) !important;
+  font-weight: 500;
+}

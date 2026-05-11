@@ -1,0 +1,113 @@
+.card {
+  margin: 24px 20px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 0.5px solid var(--border);
+  background: var(--surface);
+}
+
+.title {
+  font-size: 10px;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 16px 14px;
+}
+
+.scoreCol {
+  flex-shrink: 0;
+}
+
+.scoreNum {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  line-height: 1;
+}
+
+.score {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: var(--mono);
+  color: var(--cyan);
+}
+
+.denom {
+  font-size: 18px;
+  color: var(--hint);
+  font-family: var(--mono);
+}
+
+.scoreLabel {
+  font-size: 10px;
+  color: var(--hint);
+  margin-top: 3px;
+}
+
+.model {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 4px;
+  font-family: var(--mono);
+}
+
+.barsCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.barRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.barLabel {
+  font-size: 10px;
+  width: 58px;
+  color: var(--muted);
+}
+
+.barPct {
+  font-size: 10px;
+  width: 30px;
+  text-align: right;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 0 14px 14px;
+}
+
+.item {
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.itemLabel {
+  font-size: 10px;
+  color: var(--hint);
+}
+
+.itemValue {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ghost);
+}

@@ -20,6 +20,14 @@
 # production
 /build
 
+# Environment variables — NEVER commit these
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
 # misc
 .DS_Store
 *.pem

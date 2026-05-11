@@ -1,0 +1,273 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 28px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.header h2 {
+  margin-bottom: 10px;
+}
+
+.intro {
+  max-width: 620px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  flex: 1;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.3));
+}
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.even {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.odd {
+  grid-template-columns: 1.2fr 1fr;
+  direction: rtl;
+}
+
+.odd > * {
+  direction: ltr;
+}
+
+.content {
+  padding: 16px 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, rgba(0, 242, 255, 0.2), rgba(0, 217, 192, 0.2));
+  border: 1px solid var(--border-md);
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cyan);
+  margin-bottom: 12px;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  color: var(--ghost);
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--hint);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.reportImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.reportImage:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+.reportImage::after {
+  content: 'Click to view full details';
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--cyan);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 242, 255, 0.3);
+}
+
+.reportImage:hover::after {
+  opacity: 1;
+}
+
+.bottomCta {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalOverlay {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: var(--ghost);
+  font-size: 28px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+  z-index: 1001;
+}
+
+.closeButton:hover {
+  color: var(--cyan);
+}
+
+.modalImage {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: var(--radius-lg);
+  object-fit: contain;
+  animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 960px) {
+  .section {
+    grid-template-columns: 1fr !important;
+  }
+
+  .odd {
+    grid-template-columns: 1fr !important;
+    direction: ltr !important;
+  }
+
+  .odd > * {
+    direction: ltr;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro {
+    max-width: 100%;
+  }
+
+  .logoContainer {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .showcase {
+    gap: 24px;
+  }
+
+  .section {
+    gap: 16px;
+  }
+
+  .reportImage {
+    max-height: 300px;
+  }
+
+  .sectionTitle {
+    font-size: 16px;
+  }
+}

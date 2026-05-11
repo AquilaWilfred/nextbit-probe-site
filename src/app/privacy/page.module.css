@@ -1,0 +1,89 @@
+.subheading {
+  font-size: 14px;
+  color: var(--ghost);
+  margin-bottom: 10px;
+  margin-top: 4px;
+}
+
+.splitRow {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.privacyWrapper {
+  padding: 18px 14px;
+  max-width: 1100px;
+}
+
+.cardWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.neverList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 0;
+}
+
+.neverItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.secCards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.secCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+}
+
+.secIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 860px) {
+  .splitRow, .secCards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.privacyWrapper {
+  padding: 18px 14px;
+  max-width: 1100px;
+}
+
+.intro {
+  margin-bottom: 14px;
+}
+
+.intro h2 {
+  margin-bottom: 8px;
+}
+
+.intro p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}

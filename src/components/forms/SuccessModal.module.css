@@ -1,0 +1,29 @@
+.modal {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(0,200,83,0.12);
+  border: 0.5px solid rgba(0,200,83,0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--emerald);
+}
+
+.title {
+  color: var(--ghost);
+}
+
+.desc {
+  font-size: 12px;
+}

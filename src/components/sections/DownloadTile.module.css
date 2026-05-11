@@ -1,0 +1,99 @@
+.tile {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 330px;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes tilePulse {
+  0%, 100% { transform: translateY(0); box-shadow: none; }
+  50% { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(0,0,0,0.08); }
+}
+
+.tile:hover {
+  transform: translateY(-2px);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon {
+  font-size: 34px;
+}
+
+.platform {
+  font-size: 16px;
+  color: var(--ghost);
+}
+
+.version {
+  font-size: 12px;
+  color: var(--hint);
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.arch {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  font-size: 11px;
+  color: var(--cyan);
+  font-family: var(--mono);
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 13px;
+}
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metaRow dt,
+.metaRow dd {
+  font-size: 12px;
+}
+
+.checksumRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.checksumRow dt {
+  font-size: 12px;
+}
+
+.checksum {
+  font-size: 11px;
+  color: var(--hint);
+  word-break: break-all;
+}
+
+.tile:nth-of-type(2),
+.tile:nth-of-type(4) {
+  animation: tilePulse 5s ease-in-out infinite;
+}
+
+@media (max-width: 720px) {
+  .tile {
+    min-height: auto;
+  }
+}

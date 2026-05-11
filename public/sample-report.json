@@ -1,0 +1,543 @@
+{
+  "timestamp": "2026-05-11 07-36-37",
+  "system": {
+    "manufacturer": "Dell Inc.",
+    "model": "Latitude 7280",
+    "serial": "3K3TBH2",
+    "bios_version": "1.40.0",
+    "bios_date": "11/05/2024",
+    "cpu": "Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz",
+    "cpu_cores": 4,
+    "cpu_threads": 4,
+    "cpu_mhz": 2887,
+    "ram_gb": 16.3,
+    "os_name": "Ubuntu 24.04.4 LTS",
+    "os_build": "6.17.0-23-generic",
+    "os_arch": "x86_64",
+    "install_date": "N/A",
+    "last_boot": "system boot  2026-05-10 11:02",
+    "cpu_arch": "x86_64",
+    "ethernet_adapters": 1,
+    "hostname": "xcoghost",
+    "os_type": "ubuntu",
+    "os_version": "#23~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 14 16:11:48 UTC 2",
+    "python": "3.12.3",
+    "mac_addrs": [
+      "42:12:**:**:BA:2A",
+      "56:D7:**:**:67:89",
+      "88:B1:**:**:2D:47",
+      "E6:E2:**:**:60:DF"
+    ],
+    "mac_addr": "42:12:**:**:BA:2A",
+    "machine_id": "41c569**********e6c8c477b886f2e",
+    "qr": {
+      "serial_machine_id": null,
+      "audit": null
+    },
+    "bios_age_years": 1.5,
+    "bios_age_rating": [
+      "GOOD",
+      "#29b6f6"
+    ]
+  },
+  "virtualization": {
+    "is_vm": false,
+    "hypervisor": "None",
+    "method": "no match"
+  },
+  "oem": {
+    "oem_key": "N/A (Windows only)",
+    "installed_last5": "N/A",
+    "match": "N/A"
+  },
+  "cpu_throttle": {
+    "base_mhz": 2800,
+    "stress_mhz": 3100,
+    "max_mhz": 3900,
+    "pct": 79.5,
+    "rating": [
+      "POOR",
+      "#ffa726"
+    ],
+    "warning": true
+  },
+  "ram_test": {
+    "blocks": 4,
+    "block_mb": 256,
+    "errors": 0,
+    "result": "PASS",
+    "rating": [
+      "EXCELLENT",
+      "#00e676"
+    ],
+    "ecc": {
+      "has_ecc": false,
+      "details": "dmidecode output unavailable"
+    }
+  },
+  "battery": {
+    "present": true,
+    "percent": 100,
+    "plugged_in": false,
+    "design_mwh": 65276,
+    "full_mwh": 827,
+    "wear_pct": 98.7,
+    "cycles": 0,
+    "chemistry": "N/A",
+    "status": "Not charging",
+    "rating": [
+      "VERY POOR",
+      "#ef5350"
+    ],
+    "desc": "Battery heavily degraded. Replace immediately."
+  },
+  "device_classification": {
+    "category": "Laptop",
+    "chassis_type": "Notebook",
+    "form_factor": "Notebook",
+    "confidence": "high",
+    "notes": [
+      "SMBIOS chassis type 10 (Notebook)"
+    ]
+  },
+  "disks": {
+    "disks": [
+      {
+        "device": "/dev/sda2",
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "total_gb": 249.8,
+        "used_gb": 153.4,
+        "free_gb": 83.6,
+        "used_pct": 64.7
+      },
+      {
+        "device": "/dev/loop0",
+        "mountpoint": "/snap/astral-uv/1448",
+        "fstype": "squashfs",
+        "total_gb": 0.0,
+        "used_gb": 0.0,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop1",
+        "mountpoint": "/snap/bare/5",
+        "fstype": "squashfs",
+        "total_gb": 0.0,
+        "used_gb": 0.0,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop2",
+        "mountpoint": "/snap/brave/628",
+        "fstype": "squashfs",
+        "total_gb": 0.2,
+        "used_gb": 0.2,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop3",
+        "mountpoint": "/snap/brave/626",
+        "fstype": "squashfs",
+        "total_gb": 0.2,
+        "used_gb": 0.2,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop6",
+        "mountpoint": "/snap/core18/2999",
+        "fstype": "squashfs",
+        "total_gb": 0.1,
+        "used_gb": 0.1,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop5",
+        "mountpoint": "/snap/core22/2411",
+        "fstype": "squashfs",
+        "total_gb": 0.1,
+        "used_gb": 0.1,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop4",
+        "mountpoint": "/snap/clion/439",
+        "fstype": "squashfs",
+        "total_gb": 1.9,
+        "used_gb": 1.9,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop7",
+        "mountpoint": "/snap/core24/1587",
+        "fstype": "squashfs",
+        "total_gb": 0.1,
+        "used_gb": 0.1,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop8",
+        "mountpoint": "/snap/canonical-livepatch/406",
+        "fstype": "squashfs",
+        "total_gb": 0.0,
+        "used_gb": 0.0,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop9",
+        "mountpoint": "/snap/cups/1183",
+        "fstype": "squashfs",
+        "total_gb": 0.1,
+        "used_gb": 0.1,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop10",
+        "mountpoint": "/snap/firefox/8247",
+        "fstype": "squashfs",
+        "total_gb": 0.3,
+        "used_gb": 0.3,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop13",
+        "mountpoint": "/snap/dbeaver-ce/477",
+        "fstype": "squashfs",
+        "total_gb": 0.2,
+        "used_gb": 0.2,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop12",
+        "mountpoint": "/snap/firmware-updater/226",
+        "fstype": "squashfs",
+        "total_gb": 0.0,
+        "used_gb": 0.0,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop11",
+        "mountpoint": "/snap/gnome-42-2204/247",
+        "fstype": "squashfs",
+        "total_gb": 0.6,
+        "used_gb": 0.6,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop16",
+        "mountpoint": "/snap/postman/360",
+        "fstype": "squashfs",
+        "total_gb": 0.2,
+        "used_gb": 0.2,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop18",
+        "mountpoint": "/snap/scrcpy-runtime-2404/1",
+        "fstype": "squashfs",
+        "total_gb": 0.0,
+        "used_gb": 0.0,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop17",
+        "mountpoint": "/snap/snap-store/1367",
+        "fstype": "squashfs",
+        "total_gb": 0.0,
+        "used_gb": 0.0,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop19",
+        "mountpoint": "/snap/mesa-2404/1165",
+        "fstype": "squashfs",
+        "total_gb": 0.4,
+        "used_gb": 0.4,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop15",
+        "mountpoint": "/snap/insomnia/362",
+        "fstype": "squashfs",
+        "total_gb": 0.5,
+        "used_gb": 0.5,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop20",
+        "mountpoint": "/snap/gtk-common-themes/1535",
+        "fstype": "squashfs",
+        "total_gb": 0.1,
+        "used_gb": 0.1,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop24",
+        "mountpoint": "/snap/ngrok/385",
+        "fstype": "squashfs",
+        "total_gb": 0.0,
+        "used_gb": 0.0,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop25",
+        "mountpoint": "/snap/intellij-idea-community/737",
+        "fstype": "squashfs",
+        "total_gb": 1.7,
+        "used_gb": 1.7,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop23",
+        "mountpoint": "/snap/gnome-46-2404/153",
+        "fstype": "squashfs",
+        "total_gb": 0.6,
+        "used_gb": 0.6,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop22",
+        "mountpoint": "/snap/snapd-desktop-integration/361",
+        "fstype": "squashfs",
+        "total_gb": 0.0,
+        "used_gb": 0.0,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop26",
+        "mountpoint": "/snap/snapd/26865",
+        "fstype": "squashfs",
+        "total_gb": 0.1,
+        "used_gb": 0.1,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop21",
+        "mountpoint": "/snap/intellij-idea-community/743",
+        "fstype": "squashfs",
+        "total_gb": 1.7,
+        "used_gb": 1.7,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/loop27",
+        "mountpoint": "/snap/pycharm-community/600",
+        "fstype": "squashfs",
+        "total_gb": 1.3,
+        "used_gb": 1.3,
+        "free_gb": 0.0,
+        "used_pct": 100.0
+      },
+      {
+        "device": "/dev/sda1",
+        "mountpoint": "/boot/efi",
+        "fstype": "vfat",
+        "total_gb": 1.1,
+        "used_gb": 0.0,
+        "free_gb": 1.1,
+        "used_pct": 1.5
+      }
+    ],
+    "smart": {
+      "power_on_hours": 8679,
+      "wear": 0,
+      "read_errors": 0,
+      "write_errors": "N/A",
+      "reallocated": 0,
+      "power_rating": [
+        "POOR",
+        "#ffa726"
+      ],
+      "wear_rating": [
+        "EXCELLENT",
+        "#00e676"
+      ]
+    },
+    "smart_all": [
+      {
+        "device": "/dev/sda",
+        "power_on_hours": 8679,
+        "wear": 0,
+        "read_errors": 0,
+        "reallocated": 0
+      }
+    ]
+  },
+  "raid_controllers": [
+    "00:17.0 RAID bus controller: Intel Corporation 82801 Mobile SATA Controller [RAID mode] (rev 21)"
+  ],
+  "gpu": {
+    "gpus": [
+      "00:02.0 VGA compatible controller: Intel Corporation HD Graphics 620 (rev 02)"
+    ],
+    "gpu_name": "00:02.0 VGA compatible controller: Intel Corporation HD Graphics 620 (rev 02)",
+    "is_dedicated": false,
+    "driver_date": "N/A",
+    "vram": "N/A",
+    "crashes": 0,
+    "rating": [
+      "GOOD",
+      "#00e676"
+    ],
+    "desc": "GPU appears in good condition."
+  },
+  "display": {
+    "manufacturer": "N/A",
+    "model": "eDP-1",
+    "connection": "N/A",
+    "resolution": "1920x1080",
+    "refresh_hz": "N/A"
+  },
+  "temperature": {
+    "temps": {
+      "acpitz": 25.0,
+      "pch_skylake": 55.0,
+      "dell_smm": 31.0,
+      "Package id 0": 81.0,
+      "Core 0": 73.0,
+      "Core 1": 81.0,
+      "iwlwifi_1": 30.0
+    },
+    "max_temp": 81.0,
+    "rating": [
+      "POOR",
+      "#ffa726"
+    ]
+  },
+  "network": {
+    "wifi_name": "Internet",
+    "wifi_signal": "-28 dBm",
+    "ethernet": "N/A",
+    "ifaces": [
+      {
+        "interface": "wlp2s0",
+        "ip": "192.168.1.109",
+        "netmask": "255.255.255.0"
+      },
+      {
+        "interface": "virbr0",
+        "ip": "192.168.122.1",
+        "netmask": "255.255.255.0"
+      },
+      {
+        "interface": "docker0",
+        "ip": "172.17.0.1",
+        "netmask": "255.255.0.0"
+      },
+      {
+        "interface": "flannel.1",
+        "ip": "10.42.0.0",
+        "netmask": "255.255.255.255"
+      },
+      {
+        "interface": "cni0",
+        "ip": "10.42.0.1",
+        "netmask": "255.255.255.0"
+      }
+    ],
+    "internet": true,
+    "ping_ms": 34.1,
+    "mac": "A4:4C:C8:15:98:B8"
+  },
+  "peripherals": {
+    "webcam": "Detected",
+    "bluetooth": "Detected",
+    "audio": "**** List of PLAYBACK Hardware Devices ****\ncard 0: PCH [HDA Intel PCH], device 0: ALC3246 Analog [ALC3246 Analog]\n  Subdevices: 1/1\n  Subdevice #0: subdevice #0\ncard 0: PCH [HDA Intel PCH], device 3: HDMI 0 [HDMI 0]\n  Subdevices: 1/1\n  Subdevice #0: subdevice #0\ncard 0: PCH [HDA Intel PCH], device 7: HDMI 1 [HDMI 1]\n  Subdevices: 1/1\n  Subdevice #0: subdevice #0\ncard 0: PCH [HDA Intel PCH], device 8: HDMI 2 [HDMI 2]\n  Subdevices: 1/1\n  Subdevice #0: subdevice #0",
+    "keyboard": "\u23a1 Virtual core pointer                    \tid=2\t[master pointer  (3)]\n\u239c   \u21b3 Virtual core XTEST pointer              \tid=4\t[slave  pointer  (2)]\n\u239c   \u21b3 DLL079F:01 044E:120B                    \tid=10\t[slave  pointer  (2)]\n\u23a3 Virtual core keyboard                   \tid=3\t[master keyboard (2)]\n    \u21b3 Virtual core XTEST keyboard             \tid=5\t[slave  keyboard (3)]\n    \u21b3 Power Button                            \tid=6\t[slave  keyboard (3)]\n    \u21b3 Video Bus                               \tid=7\t[slave  keyboard (3)]\n    \u21b3 Power Button                            \tid=8\t[slave  keyboard (3)]\n    \u21b3 Sleep Button                            \tid=9\t[slave  keyboard (3)]\n    \u21b3 Intel HID events                        \tid=11\t[slave  keyboard (3)]\n    \u21b3 Intel HID 5 button array                \tid=12\t[slave  keyboard (3)]\n    \u21b3 Dell WMI hotkeys                        \tid=13\t[slave  keyboard (3)]\n    \u21b3 AT Translated Set 2 keyboard            \tid=14\t[slave  keyboard (3)]",
+    "touchpad": "N/A",
+    "usb_count": 7,
+    "fan": "Not detected via sysfs"
+  },
+  "security": {
+    "activated": "N/A",
+    "antivirus": "None detected",
+    "firewall": "Active",
+    "tpm": "Not found",
+    "secure_boot": "Disabled/N/A",
+    "bitlocker": "N/A"
+  },
+  "performance": {
+    "process_count": 346,
+    "cpu_pct": 21.0,
+    "mem_pct": 61.7,
+    "startup_count": 154,
+    "startup_rating": [
+      "VERY POOR",
+      "#ef5350"
+    ],
+    "top_procs": [
+      [
+        "next-server (v16.2.4)",
+        3262.6
+      ],
+      [
+        "chrome",
+        641.5
+      ],
+      [
+        "k3s-server",
+        641.0
+      ],
+      [
+        "code",
+        591.1
+      ],
+      [
+        "chrome",
+        491.5
+      ]
+    ],
+    "disk_read_mbs": 0.0,
+    "disk_write_mbs": 0.0
+  },
+  "events": {
+    "count": 20,
+    "events": [
+      {
+        "msg": "May 11 07:14:37 xcoghost kernel: iwlwifi 0000:00:1c.2: 00000000: 9d128086 00100407 060400f1 00810000 00000000 00000000 0"
+      },
+      {
+        "msg": "May 11 07:14:37 xcoghost kernel: iwlwifi 0000:00:1c.2: 00000020: ec00ec00 0001fff1 00000000 00000000 00000000 00000040 0"
+      },
+      {
+        "msg": "May 11 07:14:37 xcoghost kernel: iwlwifi 0000:00:1c.2: 00000040: 01428010 00008001 0010000f 03724c13 30110c42 0034b200 0"
+      },
+      {
+        "msg": "May 11 07:14:37 xcoghost kernel: iwlwifi 0000:00:1c.2: 00000060: 00000000 00000837 00000400 0000000e 00010003 00000000 0"
+      },
+      {
+        "msg": "May 11 07:14:37 xcoghost kernel: iwlwifi 0000:00:1c.2: 00000080: 00019005 fee00278 00000000 00000000 0000a00d 079f1028 0"
+      }
+    ],
+    "rating": [
+      "VERY POOR",
+      "#ef5350"
+    ]
+  }
+}

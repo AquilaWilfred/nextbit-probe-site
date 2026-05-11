@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NextBit Probe — Next.js Project
+
+A production-grade Next.js 15 + TypeScript site for the NextBit Probe hardware diagnostic tool.
+
+## Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript (strict)
+- **Styling**: CSS Modules + global design tokens
+- **Fonts**: Space Grotesk + JetBrains Mono (Google Fonts)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                    # File-based routing (Next.js App Router)
+│   ├── layout.tsx          # Root layout (Navbar + Footer)
+│   ├── globals.css         # Design tokens + shared utility classes
+│   ├── page.tsx            # Home — Hero, ReportCard, FeatureGrid
+│   ├── docs/page.tsx       # Docs — Sidebar + CodeBlock sections
+│   ├── downloads/page.tsx  # Downloads — DownloadTile + ChangelogList
+│   ├── privacy/page.tsx    # Privacy — data table + security cards
+│   └── contact/page.tsx    # Contact — channels + ContactForm
+│
+├── components/
+│   ├── layout/             # Navbar, Footer, Sidebar, SectionWrapper
+│   ├── sections/           # Hero, ReportCard, FeatureGrid, DownloadTile, ChangelogList
+│   ├── forms/              # ContactForm, SuccessModal
+│   └── ui/                 # Input, TextArea, SubmitButton, CodeBlock, InfoCallout
+│
+├── constants/index.ts      # Features, downloads, changelog, nav links, site meta
+├── lib/utils.ts            # Score calculator, formatters
+└── types/index.ts          # Full TypeScript interfaces for ProbeReport + UI props
+```
 
-## Learn More
+## Pages
 
-To learn more about Next.js, take a look at the following resources:
+| Route | Type | Description |
+|-------|------|-------------|
+| `/` | Server | Homepage with live ReportCard from sample JSON |
+| `/docs` | Client | Interactive docs with sidebar navigation |
+| `/downloads` | Server | Platform tiles + version changelog |
+| `/privacy` | Server | Data policy, never-list, security cards |
+| `/contact` | Mixed | Channel links + interactive feedback form |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Design Decisions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Server Components by default** for SEO pages (Home, Downloads, Privacy)
+- **Client Components** only where interactivity is needed (Docs sidebar, ContactForm)
+- **CSS Modules** per component for scoped styles — no CSS-in-JS overhead
+- **Design tokens** in `globals.css` `:root` — consistent theming with zero runtime cost
+- **`ProbeReport` type** in `src/types/index.ts` mirrors the JSON output exactly
 
-## Deploy on Vercel
+## Connecting the Contact Form
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+In `ContactForm.tsx`, replace the `console.log` with your API call:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```ts
+// Example: send to a Next.js API route
+await fetch("/api/feedback", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(payload),
+});
+```
+
+## Adding an API Route (optional)
+
+Create `src/app/api/feedback/route.ts`:
+
+```ts
+import { NextRequest, NextResponse } from "next/server";
+
+export async function POST(req: NextRequest) {
+  const body = await req.json();
+  // Forward to email / database / webhook
+  console.log("Feedback:", body);
+  return NextResponse.json({ ok: true });
+}
+```

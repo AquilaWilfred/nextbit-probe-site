@@ -1,0 +1,75 @@
+.footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 40px 24px;
+  border-top: 1px solid var(--border-md);
+  background: linear-gradient(180deg, var(--surface) 0%, rgba(18, 22, 31, 0.8) 100%);
+  flex-wrap: wrap;
+  gap: 28px;
+  box-shadow: inset 0 1px 0 0 rgba(0, 242, 255, 0.08);
+  margin-top: 20px;
+}
+
+.about {
+  max-width: 520px;
+}
+
+.copy {
+  display: block;
+  font-size: 11px;
+  color: var(--hint);
+  font-family: var(--mono);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.footerRight {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.link {
+  font-size: 12px;
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s, background 0.15s;
+}
+
+.link:hover {
+  color: var(--ghost);
+  background: var(--card);
+}
+
+.help {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.help a {
+  color: var(--cyan);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.help a:hover {
+  color: #00dce8;
+}

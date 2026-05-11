@@ -1,0 +1,124 @@
+/* Container Logic: Split into Text (Left) and Buttons (Right) */
+.hero {
+  padding: 48px 0;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr; /* Text gets more weight, buttons stay right */
+  gap: 48px;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heading {
+  color: var(--ghost);
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.accent {
+  color: var(--cyan);
+  display: block; /* Forces the narration line to its own row for impact */
+  margin-top: 8px;
+}
+
+.lead {
+  max-width: 620px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* Sidebar Action Column */
+.actions {
+  display: flex;
+  flex-direction: column; /* Stack buttons column way */
+  gap: 16px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+}
+
+/* Force buttons to fill the sidebar width */
+.actions :global(.btn-primary),
+.actions :global(.btn-secondary) {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 14px;
+}
+
+/* Trust & Stats */
+.trustGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.trust {
+  font-size: 13px;
+  color: var(--hint);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.check {
+  color: var(--emerald);
+  font-weight: bold;
+}
+
+.pulse {
+  color: var(--emerald);
+  margin-right: 8px;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.miniStats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.statItem span {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 2px;
+}
+
+.statItem strong {
+  font-size: 11px;
+  color: var(--emerald);
+  letter-spacing: 1px;
+}
+
+/* Responsive: Stack vertically on mobile */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 32px 0;
+    gap: 32px;
+  }
+
+  .actions {
+    padding: 24px;
+  }
+}
