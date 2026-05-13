@@ -87,7 +87,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const EMAIL_TO = process.env.EMAIL_TO!;
 const EMAIL_FROM = process.env.EMAIL_FROM || "feedback@yourdomain.com";
 
@@ -106,6 +105,7 @@ export async function POST(req: Request) {
     );
   }
 
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const subject = `NextBit Probe Feedback${category ? ` – ${category}` : ""}`;
 
   const html = `
