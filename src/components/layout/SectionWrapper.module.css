@@ -1,11 +1,11 @@
 .wrapper {
-  padding: 36px 24px;
+  padding: clamp(30px, 3vw, 50px) 24px;
   max-width: 1180px;
   margin: 0 auto;
 }
 
 .divided {
-  border-bottom: 0.5px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .narrow {

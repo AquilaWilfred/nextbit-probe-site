@@ -1,5 +1,6 @@
 .sidebar {
   width: 160px;
+  max-width: 240px;
   flex-shrink: 0;
   border-right: 0.5px solid var(--border);
   padding: 16px 10px;
@@ -45,4 +46,16 @@
   background: var(--card) !important;
   color: var(--cyan) !important;
   font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 0.5px solid var(--border);
+    padding: 18px 14px;
+    margin-bottom: 18px;
+  }
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -9,6 +10,11 @@ import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
 
   return (
     <nav className={styles.nav} role="navigation" aria-label="Main navigation">
@@ -43,6 +49,27 @@ export default function Navbar() {
         <Link href="/downloads" className="btn-primary" style={{ fontSize: 12, padding: "7px 14px" }}>
           Download
         </Link>
+        <button
+          type="button"
+          className={styles.mobileToggle}
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-expanded={menuOpen}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+        >
+          <span aria-hidden="true">{menuOpen ? "✕" : "☰"}</span>
+        </button>
+      </div>
+
+      <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>
+        {NAV_LINKS.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className={`${styles.link} ${pathname === link.href ? styles.active : ""}`}
+          >
+            {link.label}
+          </Link>
+        ))}
       </div>
     </nav>
   );

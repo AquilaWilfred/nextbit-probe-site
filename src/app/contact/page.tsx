@@ -104,7 +104,7 @@ export default function ContactPage() {
 
       <div className={styles.footerNote}>
         <p>
-          NextBit Probe is a product of <b>NextBit Technology</b>.
+          NextBit Probe is a product of <b>XcognVis.com Technology</b>.
           Auditing thousands of devices globally.
         </p>
       </div>

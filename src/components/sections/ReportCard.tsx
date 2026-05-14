@@ -855,7 +855,7 @@ export default function ReportCard({ data }: ReportCardProps) {
       <div
         role="list"
         aria-label="Key hardware ratings"
-        style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 12, marginBottom: 20 }}
+        style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12, marginBottom: 20 }}
       >
         {[
           { label: "Battery",      value: d.battery_rating,       color: ratingColor(d.battery_rating) },
@@ -898,7 +898,7 @@ export default function ReportCard({ data }: ReportCardProps) {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
+          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
           gap: 16,
           marginBottom: 16,
         }}
@@ -1152,7 +1152,7 @@ export default function ReportCard({ data }: ReportCardProps) {
       </div>
 
       {/* ── CPU Throttle + RAM ────────────────────────────────────────── */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16, marginBottom: 16 }}>
         <Card>
           <SectionTitle>CPU Throttle Test</SectionTitle>
           <div style={{ textAlign: "center", margin: "4px 0 8px" }}>
@@ -1205,7 +1205,7 @@ export default function ReportCard({ data }: ReportCardProps) {
         <SectionTitle>Disk SMART</SectionTitle>
 
         {/* Summary stats */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 12, marginBottom: 14 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12, marginBottom: 14 }}>
           {[
             { label: "Power-On Hours", value: d.disk_power_rating,  color: ratingColor(d.disk_power_rating) },
             { label: "Disk Wear",      value: d.disk_wear_rating,   color: ratingColor(d.disk_wear_rating) },
@@ -1320,7 +1320,7 @@ export default function ReportCard({ data }: ReportCardProps) {
       </Card>
 
       {/* ── Temperature + Network ─────────────────────────────────────── */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16, marginBottom: 16 }}>
         <Card>
           <SectionTitle>Temperature</SectionTitle>
           {Object.keys(d.temperatures).length > 0 ? (
